@@ -1,0 +1,1 @@
+[libnode v8 worker proper](https://github.com/nodejs/node/issues/23265#issuecomment-1236078047)
