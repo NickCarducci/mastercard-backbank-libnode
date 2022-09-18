@@ -1,7 +1,7 @@
 //https://github.com/mmomtchev/libnode/blob/main/examples/axios-example-es6.cc
 #include <stdio.h>
-#define NAPI_EXPERIMENTAL
-#define NAPI_EMBEDDING
+#define NAPI_EXPERIMENTAL //c
+#define NAPI_EMBEDDING //c++
 #include <napi.h>
 
 int main()

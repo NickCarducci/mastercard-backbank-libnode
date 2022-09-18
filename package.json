@@ -4,10 +4,8 @@
   "description": "libnode with cloudflare service worker-emscripten-template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{js,css,json,md}'"
   },
-  "author": "Nick Carducci nmcarducci@gmail.com",
+  "author": "Nick Carducci (nmcarducci@gmail.com)",
   "license": "",
   "devDependencies": {
     "copy-webpack-plugin": "^5.0.3",
@@ -15,12 +13,8 @@
     "shelljs": "^0.8.3"
   },
   "false": {
-    "prettier": {
-      "singleQuote": true,
-      "semi": false,
-      "tabWidth": 2,
-      "trailingComma": "all",
-      "printWidth": 80
-    }
+    "prettier": "{singleQuote: true,semi: false,tabWidth: 2,trailingComma: all,printWidth: 80}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{js,css,json,md}'"
   }
 }

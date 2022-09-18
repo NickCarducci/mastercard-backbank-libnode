@@ -14,4 +14,15 @@ i. [worker-emscripten-template](https://github.com/cloudflare/worker-emscripten-
 
 ii. [rustwasm-worker-template](https://github.com/cloudflare/rustwasm-worker-template)
 
+([js_native_api_v8.cc](https://github.com/mmomtchev/node/blob/napi-libnode/src/js_native_api_v8.cc) napi-libnode branch)
+````
+git clone -b napi-libnode https://github.com/mmomtchev/node.git
+cd node && ./configure --shared && make -j4
+````
+~~`chmod +x make-libnode-dist.sh`~~
+
+`g++ -I/usr/include/libnode -I/usr/include/node -o libnode-napi src/main.cc -lnode`
+
+`wrangler publish`
+
 b. [mastercard-backbank-node-zero-trust](https://github.com/NickCarducci/mastercard-backbank-node-zero-trust)
