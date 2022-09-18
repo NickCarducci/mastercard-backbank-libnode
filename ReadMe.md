@@ -14,11 +14,14 @@ i. [worker-emscripten-template](https://github.com/cloudflare/worker-emscripten-
 
 ii. [rustwasm-worker-template](https://github.com/cloudflare/rustwasm-worker-template)
 
-([js_native_api_v8.cc](https://github.com/mmomtchev/node/blob/napi-libnode/src/js_native_api_v8.cc) napi-libnode branch)
-````
-git clone -b napi-libnode https://github.com/mmomtchev/node.git
-cd node && ./configure --shared && make -j4
-````
+## [Node](https://github.com/nodejs/node/blob/main/BUILDING.md#building-nodejs-on-supported-platforms) source ([js_native_api_v8.cc](https://github.com/mmomtchev/node/blob/napi-libnode/src/js_native_api_v8.cc) napi-libnode branch)
+
+`git clone -b napi-libnode https://github.com/mmomtchev/node.git`
+
+`cd node && ./configure --shared && make -j4` (this takes 10-15 minutes)
+
+`git clone -b napi-embedding https://github.com/mmomtchev/node-addon-api.git`
+
 ~~`chmod +x make-libnode-dist.sh`~~
 
 `g++ -I/usr/include/libnode -I/usr/include/node -o libnode-napi src/main.cc -lnode`
