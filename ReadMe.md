@@ -16,6 +16,10 @@ i. [worker-emscripten-template](https://github.com/cloudflare/worker-emscripten-
 
 ~~`chmod +x make-libnode-dist.sh`~~
 
+`brew install wget`
+
+`./extract-libnode-dist.sh`
+
 `-I` [include](https://stackoverflow.com/questions/31026829/trying-to-use-i-option-with-g)
 
 `g++ -v -I usr/include/libnode -I $(pwd)/node -I $(pwd)/node-addon-api -o libnode-napi src/main.cc -lnode` 
