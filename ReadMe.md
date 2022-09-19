@@ -20,11 +20,17 @@ ii. [rustwasm-worker-template](https://github.com/cloudflare/rustwasm-worker-tem
 
 `cd node && ./configure --shared && make -j4` (this takes 10-15 minutes)
 
-`git clone -b napi-embedding https://github.com/mmomtchev/node-addon-api.git`
+`git clone -b napi_embedding https://github.com/mmomtchev/node-addon-api.git`
 
 ~~`chmod +x make-libnode-dist.sh`~~
 
-`g++ -I/usr/include/libnode -I/usr/include/node -o libnode-napi src/main.cc -lnode`
+`-I` [include](https://stackoverflow.com/questions/31026829/trying-to-use-i-option-with-g)
+
+`g++ -v -I usr/include/libnode -I $(pwd)/node -I $(pwd)/node-addon-api -o libnode-napi src/main.cc -lnode` 
+
+[~~`$PATH:$HOME`~~](https://cplusplus.com/forum/unices/71641/)
+
+[`g++ -B /napi.h `](https://unix.stackexchange.com/questions/523350/assign-pwd-to-path-variable-conditionally)
 
 `wrangler publish`
 

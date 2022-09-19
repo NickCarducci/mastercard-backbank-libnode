@@ -2,3 +2,4 @@ node
 .vscode
 artifacts
 node-16.x
+node-addon-api
