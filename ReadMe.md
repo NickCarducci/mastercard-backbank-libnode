@@ -14,11 +14,13 @@ i. [worker-emscripten-template](https://github.com/cloudflare/worker-emscripten-
 
 `git clone -b napi_embedding https://github.com/mmomtchev/node-addon-api.git`
 
-~~`chmod +x make-libnode-dist.sh`~~
+~~`chmod +x build-libnode.sh`~~
 
-`brew install wget`
+~~`brew install wget`~~
 
-`./extract-libnode-dist.sh`
+`node -v` (v16.17.0)
+
+`./build-libnode.sh`
 
 `-I` [include](https://stackoverflow.com/questions/31026829/trying-to-use-i-option-with-g)
 
